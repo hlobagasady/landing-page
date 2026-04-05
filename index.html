@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tingkatkan Penjualan - Buat Landing Page Anda sekarang!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            'primary-dark': '#1d4ed8',
+            'primary-light': '#eff6ff',
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-sans text-gray-800 bg-white antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <span class="font-bold text-lg text-gray-900">LandingKu</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+        <a href="#masalah" class="hover:text-primary transition-colors">Masalah</a>
+        <a href="#solusi" class="hover:text-primary transition-colors">Solusi</a>
+        <a href="#penawaran" class="hover:text-primary transition-colors">Penawaran</a>
+        <a href="portfolio.html" class="hover:text-primary transition-colors">Portfolio</a>
+      </div>
+      <a href="https://wa.me/6285718102378?text=Halo%2C%20saya%20mau%20konsultasi%20gratis" target="_blank"
+        class="bg-primary text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-primary-dark transition-all shadow-sm hover:shadow-md">
+        Konsultasi Gratis
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="pt-28 pb-20 md:pt-36 md:pb-28 bg-gradient-to-br from-slate-50 via-blue-50/40 to-white relative overflow-hidden">
+    <!-- Background decorative elements -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-100/60 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-50 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Left: Text -->
+        <div class="relative z-10">
+          <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-primary text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
+            <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
+            Khusus untuk UMKM Indonesia
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+            Stop jualan manual.<br />
+            <span class="text-primary">Bangun sistem yang bantu closing</span> tanpa capek chat terus.
+          </h1>
+          <p class="text-gray-500 text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
+            Banyak owner UMKM stuck bukan karena produknya jelek, tapi karena belum punya sistem jualan yang jelas. Landing page bisa bantu jelasin produk lo secara otomatis dan ningkatin peluang closing.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="https://wa.me/6285718102378?text=Halo%2C%20saya%20mau%20cek%20cara%20jualan%20bisnis%20saya%20gratis" target="_blank"
+              class="btn-primary inline-flex items-center justify-center gap-2 bg-primary text-white font-bold px-6 py-4 rounded-2xl text-sm sm:text-base shadow-lg shadow-blue-200 hover:bg-primary-dark transition-all hover:shadow-xl hover:shadow-blue-200 hover:-translate-y-0.5">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Cek Gratis Cara Jualan Bisnis Saya
+            </a>
+            <a href="https://wa.me/6285718102378?text=Halo%2C%20saya%20mau%20konsultasi%20via%20WhatsApp" target="_blank"
+              class="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary font-semibold px-6 py-4 rounded-2xl text-sm sm:text-base hover:bg-primary hover:text-white transition-all">
+              Konsultasi via WhatsApp
+            </a>
+          </div>
+          <p class="text-xs text-gray-400 mt-4">✓ Gratis &nbsp;·&nbsp; ✓ Tanpa komitmen &nbsp;·&nbsp; ✓ Balas cepat</p>
+        </div>
+
+        <!-- Right: Mockup Illustration -->
+        <div class="relative hidden lg:block">
+          <div class="mockup-float relative">
+            <!-- Browser mockup -->
+            <div class="bg-white rounded-2xl shadow-2xl shadow-blue-100/50 border border-gray-100 overflow-hidden">
+              <!-- Browser bar -->
+              <div class="bg-gray-50 border-b border-gray-100 px-4 py-3 flex items-center gap-2">
+                <div class="flex gap-1.5">
+                  <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                </div>
+                <div class="flex-1 bg-white rounded-lg px-3 py-1 text-xs text-gray-400 border border-gray-200 mx-4">
+                  landingku.com/produk-anda
+                </div>
+              </div>
+              <!-- Page content mockup -->
+              <div class="p-6 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
+                <div class="text-xs font-semibold opacity-70 mb-2">BRAND ANDA</div>
+                <div class="h-4 bg-white/30 rounded mb-2 w-4/5"></div>
+                <div class="h-4 bg-white/20 rounded mb-4 w-3/5"></div>
+                <div class="inline-block bg-white text-primary text-xs font-bold px-4 py-2 rounded-lg">Order Sekarang →</div>
+              </div>
+              <div class="p-6 space-y-3">
+                <div class="flex gap-3">
+                  <div class="w-8 h-8 bg-blue-100 rounded-lg flex-shrink-0"></div>
+                  <div class="flex-1 space-y-1.5">
+                    <div class="h-2.5 bg-gray-200 rounded w-3/4"></div>
+                    <div class="h-2 bg-gray-100 rounded w-full"></div>
+                    <div class="h-2 bg-gray-100 rounded w-2/3"></div>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <div class="w-8 h-8 bg-green-100 rounded-lg flex-shrink-0"></div>
+                  <div class="flex-1 space-y-1.5">
+                    <div class="h-2.5 bg-gray-200 rounded w-4/5"></div>
+                    <div class="h-2 bg-gray-100 rounded w-full"></div>
+                    <div class="h-2 bg-gray-100 rounded w-3/4"></div>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <div class="w-8 h-8 bg-purple-100 rounded-lg flex-shrink-0"></div>
+                  <div class="flex-1 space-y-1.5">
+                    <div class="h-2.5 bg-gray-200 rounded w-2/3"></div>
+                    <div class="h-2 bg-gray-100 rounded w-full"></div>
+                    <div class="h-2 bg-gray-100 rounded w-4/5"></div>
+                  </div>
+                </div>
+                <div class="pt-2">
+                  <div class="h-10 bg-primary rounded-xl w-full"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Floating badge -->
+            <div class="absolute -top-4 -right-4 bg-white border border-gray-100 rounded-2xl shadow-lg px-4 py-3 text-center">
+              <div class="text-2xl font-extrabold text-primary">3x</div>
+              <div class="text-xs text-gray-500 font-medium">Lebih Banyak<br />Closing</div>
+            </div>
+            <div class="absolute -bottom-4 -left-4 bg-white border border-gray-100 rounded-2xl shadow-lg px-4 py-3 flex items-center gap-3">
+              <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-gray-800">Chat otomatis</div>
+                <div class="text-xs text-gray-400">Hemat waktu Anda</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM SECTION -->
+  <section id="masalah" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 bg-red-50 border border-red-100 text-red-600 text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
+          Apakah ini yang Anda rasakan?
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Masalah yang Bikin Jualan<br class="hidden sm:block" /> Tidak Berkembang</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Card 1 -->
+        <div class="problem-card group bg-white border border-gray-100 rounded-2xl p-6 hover:border-primary hover:shadow-lg hover:shadow-blue-50 transition-all cursor-default">
+          <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-orange-100 transition-colors">
+            <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2 leading-snug">Sering jelasin produk berulang di WhatsApp?</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Tiap hari Anda jelaskan hal yang sama ke calon pembeli yang berbeda. Capek dan tidak efisien.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="problem-card group bg-white border border-gray-100 rounded-2xl p-6 hover:border-primary hover:shadow-lg hover:shadow-blue-50 transition-all cursor-default">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors">
+            <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2 leading-snug">Banyak yang nanya tapi jarang closing?</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Calon buyer nanya-nanya terus tapi ujungnya tidak beli. Mereka belum cukup yakin untuk memutuskan.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="problem-card group bg-white border border-gray-100 rounded-2xl p-6 hover:border-primary hover:shadow-lg hover:shadow-blue-50 transition-all cursor-default">
+          <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-purple-100 transition-colors">
+            <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2 leading-snug">Capek handle chat terus setiap hari?</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Waktu habis hanya untuk membalas pesan yang isinya sama. Tidak ada waktu untuk kembangkan bisnis.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="problem-card group bg-white border border-gray-100 rounded-2xl p-6 hover:border-primary hover:shadow-lg hover:shadow-blue-50 transition-all cursor-default">
+          <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-100 transition-colors">
+            <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2 leading-snug">Pernah coba iklan tapi nggak ada hasil?</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Budget iklan sudah keluar tapi closing sedikit. Masalahnya bukan iklan-nya, tapi tujuan iklannya yang belum siap.</p>
+        </div>
+      </div>
+      <div class="mt-10 text-center">
+        <p class="text-gray-500 text-sm">Kalau Anda mengangguk membaca salah satu di atas — <span class="font-semibold text-gray-700">ini saatnya berubah.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION SECTION -->
+  <section id="solusi" class="py-20 bg-gradient-to-br from-primary-light via-white to-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Left: Flow illustration -->
+        <div class="order-2 lg:order-1">
+          <div class="bg-white rounded-3xl p-8 shadow-xl shadow-blue-50 border border-blue-50">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-6">Sistem Jualan Anda</p>
+            <!-- Flow steps -->
+            <div class="space-y-4">
+              <div class="flow-step flex items-center gap-4 bg-blue-50 rounded-2xl p-4">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+                </div>
+                <div>
+                  <div class="font-bold text-gray-900 text-sm">1. Iklan / Traffic</div>
+                  <div class="text-xs text-gray-500">Meta Ads, TikTok, organic, dll.</div>
+                </div>
+              </div>
+              <div class="flex justify-center">
+                <div class="w-0.5 h-6 bg-blue-200"></div>
+              </div>
+              <div class="flow-step flex items-center gap-4 bg-primary rounded-2xl p-4">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <div class="font-bold text-white text-sm">2. Landing Page</div>
+                  <div class="text-xs text-white/70">Jelasin produk & bangun kepercayaan</div>
+                </div>
+                <div class="ml-auto bg-white text-primary text-xs font-bold px-2 py-1 rounded-lg">⭐ Di sini</div>
+              </div>
+              <div class="flex justify-center">
+                <div class="w-0.5 h-6 bg-blue-200"></div>
+              </div>
+              <div class="flow-step flex items-center gap-4 bg-green-50 rounded-2xl p-4">
+                <div class="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                </div>
+                <div>
+                  <div class="font-bold text-gray-900 text-sm">3. Chat WhatsApp</div>
+                  <div class="text-xs text-gray-500">Calon buyer sudah siap & berminat</div>
+                </div>
+              </div>
+              <div class="flex justify-center">
+                <div class="w-0.5 h-6 bg-green-200"></div>
+              </div>
+              <div class="flow-step flex items-center gap-4 bg-yellow-50 rounded-2xl p-4">
+                <div class="w-10 h-10 bg-yellow-400 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                </div>
+                <div>
+                  <div class="font-bold text-gray-900 text-sm">4. CLOSING! 🎉</div>
+                  <div class="text-xs text-gray-500">Pembeli lebih yakin, lebih mudah deal</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Text -->
+        <div class="order-1 lg:order-2">
+          <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-primary text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
+            Solusi yang Tepat
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">
+            Landing Page yang<br /><span class="text-primary">Fokus ke Conversion</span>
+          </h2>
+          <p class="text-gray-500 mb-8 leading-relaxed">Bukan sekadar tampilan yang cantik. Landing page yang benar-benar bekerja untuk bisnis Anda — yang bicara ke calon buyer, bangun kepercayaan, dan dorong mereka untuk bertindak.</p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <span class="font-semibold text-gray-800">Jelasin produk secara otomatis</span>
+                <p class="text-sm text-gray-500 mt-0.5">Calon buyer dapat semua info yang mereka butuhkan tanpa harus nanya ke Anda.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <span class="font-semibold text-gray-800">Bikin calon buyer lebih paham & yakin</span>
+                <p class="text-sm text-gray-500 mt-0.5">Struktur konten yang disusun strategis untuk membangun kepercayaan step by step.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <span class="font-semibold text-gray-800">Mengurangi chat yang berulang</span>
+                <p class="text-sm text-gray-500 mt-0.5">Tidak perlu jelaskan hal yang sama berulang-ulang. Hemat waktu dan energi Anda.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <span class="font-semibold text-gray-800">Meningkatkan peluang closing</span>
+                <p class="text-sm text-gray-500 mt-0.5">Buyer yang masuk WA sudah warm-up. Lebih mudah deal, lebih sedikit drama.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER SECTION -->
+  <section id="penawaran" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-primary text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
+          Yang Anda Dapatkan
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Bukan Hanya Desain,<br /><span class="text-primary">Tapi Sistem Jualan</span></h2>
+        <p class="text-gray-500 mt-4 max-w-xl mx-auto">Setiap elemen dikerjakan dengan tujuan yang jelas: membantu bisnis Anda closing lebih banyak.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
+        <div class="offer-card bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-2xl p-6 hover:shadow-lg hover:shadow-blue-50 transition-all">
+          <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Struktur Fokus Closing</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Layout dan urutan konten yang disusun berdasarkan psikologi buyer untuk maksimalkan conversion.</p>
+        </div>
+        <div class="offer-card bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-2xl p-6 hover:shadow-lg hover:shadow-blue-50 transition-all">
+          <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Copywriting Dasar</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Bukan hanya desain — teks headline, subheadline, dan body copy ditulis untuk meyakinkan calon buyer.</p>
+        </div>
+        <div class="offer-card bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-2xl p-6 hover:shadow-lg hover:shadow-blue-50 transition-all">
+          <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Flow CTA yang Jelas</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Call-to-action yang ditempatkan strategis agar calon buyer tahu langkah selanjutnya dan tergerak untuk action.</p>
+        </div>
+        <div class="offer-card bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-2xl p-6 hover:shadow-lg hover:shadow-blue-50 transition-all">
+          <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Revisi Terarah</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Proses revisi dengan arahan yang jelas sehingga hasil akhir sesuai kebutuhan bisnis Anda.</p>
+        </div>
+        <div class="offer-card bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-2xl p-6 hover:shadow-lg hover:shadow-blue-50 transition-all sm:col-span-2 lg:col-span-1">
+          <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">Konsultasi Bisnis Ringan</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Diskusi singkat untuk memahami bisnis Anda sebelum mulai, agar hasilnya benar-benar relevan dan efektif.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO PREVIEW -->
+  <section id="portfolio" class="py-20 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-primary text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
+          Portfolio
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Beberapa Project yang<br />Pernah Saya Kerjakan</h2>
+        <p class="text-gray-500 mt-3">Hasil nyata dari bisnis-bisnis yang sudah menggunakan landing page.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="portfolio-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:shadow-blue-50 hover:-translate-y-1 transition-all">
+          <div class="h-44 bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/10"></div>
+            <div class="relative text-center text-white">
+              <div class="text-3xl mb-2">🌿</div>
+              <div class="font-bold text-lg">NaturalGlow</div>
+              <div class="text-xs opacity-80">Skincare Herbal</div>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 mb-3">NaturalGlow Skincare</h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex gap-2">
+                <span class="font-semibold text-red-500 flex-shrink-0">Problem:</span>
+                <span class="text-gray-500">Banyak chat nanya-nanya, tidak ada yang langsung order.</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="font-semibold text-green-600 flex-shrink-0">Solusi:</span>
+                <span class="text-gray-500">Landing page dengan proof before-after dan FAQ lengkap.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="portfolio-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:shadow-blue-50 hover:-translate-y-1 transition-all">
+          <div class="h-44 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/10"></div>
+            <div class="relative text-center text-white">
+              <div class="text-3xl mb-2">🍰</div>
+              <div class="font-bold text-lg">DapurMami</div>
+              <div class="text-xs opacity-80">Kue & Hampers</div>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 mb-3">DapurMami Hampers</h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex gap-2">
+                <span class="font-semibold text-red-500 flex-shrink-0">Problem:</span>
+                <span class="text-gray-500">Iklan jalan, tapi buyer bingung cara order dan harga.</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="font-semibold text-green-600 flex-shrink-0">Solusi:</span>
+                <span class="text-gray-500">Landing page dengan price list jelas + CTA langsung WA.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="portfolio-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:shadow-blue-50 hover:-translate-y-1 transition-all">
+          <div class="h-44 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/10"></div>
+            <div class="relative text-center text-white">
+              <div class="text-3xl mb-2">💼</div>
+              <div class="font-bold text-lg">GrowthClass</div>
+              <div class="text-xs opacity-80">Kelas Online</div>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-gray-900 mb-3">GrowthClass Academy</h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex gap-2">
+                <span class="font-semibold text-red-500 flex-shrink-0">Problem:</span>
+                <span class="text-gray-500">Kelas bagus tapi susah jelasin nilai & manfaatnya ke calon peserta.</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="font-semibold text-green-600 flex-shrink-0">Solusi:</span>
+                <span class="text-gray-500">Landing page dengan struktur problem-solusi + testimoni alumni.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="portfolio.html" class="inline-flex items-center gap-2 border-2 border-primary text-primary font-semibold px-6 py-3 rounded-2xl hover:bg-primary hover:text-white transition-all">
+          Lihat Portfolio Lengkap
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST SECTION -->
+  <section class="py-16 bg-white border-y border-gray-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+      </div>
+      <blockquote class="text-xl sm:text-2xl font-semibold text-gray-800 leading-relaxed mb-4">
+        "Saya tidak hanya membuat tampilan, tapi membantu Anda membangun <span class="text-primary">sistem jualan yang lebih jelas dan terstruktur</span> agar lebih mudah closing."
+      </blockquote>
+      <p class="text-gray-500">Setiap landing page dikerjakan dengan pemahaman bisnis Anda — bukan template copy-paste.</p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section class="py-24 bg-gradient-to-br from-primary to-blue-700 relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+      <div class="absolute bottom-0 left-0 w-60 h-60 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+    </div>
+    <div class="relative max-w-2xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Mau tahu kenapa jualan Anda belum maksimal?</h2>
+      <p class="text-blue-100 text-lg mb-8">Satu percakapan singkat bisa membuka banyak insight untuk bisnis Anda.</p>
+      <a href="https://wa.me/6285718102378?text=Halo%2C%20saya%20mau%20cek%20gratis%20kenapa%20jualan%20saya%20belum%20maksimal" target="_blank"
+        class="inline-flex items-center gap-3 bg-white text-primary font-bold px-8 py-4 rounded-2xl text-base shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Cek Gratis Sekarang via WhatsApp
+      </a>
+      <div class="mt-4 flex items-center justify-center gap-4 text-blue-200 text-sm">
+        <span>✓ Gratis</span>
+        <span>·</span>
+        <span>✓ Tanpa komitmen</span>
+        <span>·</span>
+        <span>✓ Respon cepat</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <span class="font-bold text-white">LandingKu</span>
+        </div>
+        <a href="https://wa.me/6285718102378" target="_blank" class="flex items-center gap-2 text-sm hover:text-white transition-colors">
+          <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          +62 812-3456-7890
+        </a>
+        <p class="text-xs">&copy; 2025 LandingKu. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
