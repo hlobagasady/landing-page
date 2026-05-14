@@ -100,6 +100,67 @@
 // ─── WhatsApp number: set once globally ─────────────────────────────────────
 // If you want to quickly update the WA number across the whole site,
 // edit WA_NUMBER below and it will update all WA links automatically.
+// Portfolio carousel controls
+(function initPortfolioCarousel() {
+  const carousel = document.querySelector('#portfolioCarousel');
+  const track = document.querySelector('[data-portfolio-track]');
+  const cards = track ? Array.from(track.querySelectorAll('.portfolio-card')) : [];
+  const prevButtons = document.querySelectorAll('[data-portfolio-prev]');
+  const nextButtons = document.querySelectorAll('[data-portfolio-next]');
+  if (!carousel || !track || !cards.length || !prevButtons.length || !nextButtons.length) return;
+
+  let currentIndex = 0;
+
+  const getGap = () => {
+    const styles = window.getComputedStyle(track);
+    return parseFloat(styles.columnGap || styles.gap || '0') || 0;
+  };
+
+  const getStep = () => cards[0].getBoundingClientRect().width + getGap();
+
+  const getVisibleCount = () => {
+    const step = getStep();
+    if (!step) return 1;
+    return Math.max(1, Math.floor((carousel.clientWidth + getGap()) / step));
+  };
+
+  const updateCarousel = () => {
+    const maxIndex = Math.max(0, cards.length - getVisibleCount());
+    currentIndex = Math.min(currentIndex, maxIndex);
+    track.style.transform = `translateX(-${currentIndex * getStep()}px)`;
+
+    prevButtons.forEach(button => {
+      button.disabled = currentIndex === 0;
+      button.classList.toggle('opacity-40', currentIndex === 0);
+      button.classList.toggle('cursor-not-allowed', currentIndex === 0);
+    });
+    nextButtons.forEach(button => {
+      button.disabled = currentIndex === maxIndex;
+      button.classList.toggle('opacity-40', currentIndex === maxIndex);
+      button.classList.toggle('cursor-not-allowed', currentIndex === maxIndex);
+    });
+  };
+
+  prevButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      currentIndex = Math.max(0, currentIndex - 1);
+      updateCarousel();
+    });
+  });
+
+  nextButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const maxIndex = Math.max(0, cards.length - getVisibleCount());
+      currentIndex = Math.min(maxIndex, currentIndex + 1);
+      updateCarousel();
+    });
+  });
+
+  window.addEventListener('resize', updateCarousel, { passive: true });
+  updateCarousel();
+})();
+
+
 (function updateWALinks() {
   const WA_NUMBER = '6285718102378'; // <- Ganti nomor WA Anda di sini
 
