@@ -22,13 +22,13 @@
   <!-- End Meta Pixel Code -->
   
   <title>Tingkatkan Penjualan - Buat Landing Page Anda sekarang!</title>
-  <link rel="icon" type="image/png" href="favicobagasapco.png" />
-  <link rel="apple-touch-icon" href="favicobagasapco.png" />
+  <link rel="icon" type="image/png" href="/favicobagasapco.png" />
+  <link rel="apple-touch-icon" href="/favicobagasapco.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
   <script>
     tailwind.config = {
       theme: {
@@ -51,52 +51,79 @@
   <!-- NAVBAR -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="index.html" class="flex items-center gap-2">
-        <img src="favicobagasapco.png" alt="BantuSuksesmu" class="w-10 h-10 rounded-lg object-contain" />
+      <a href="/" class="flex items-center gap-2">
+        <img src="/favicobagasapco.png" alt="BantuSuksesmu" class="w-10 h-10 rounded-lg object-contain" />
         <span class="font-bold text-lg text-gray-900">BantuSuksesmu</span>
       </a>
       <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
         <a href="#tentang" class="hover:text-primary transition-colors">Tentang Kami</a>
         <a href="#layanan" class="hover:text-primary transition-colors">Layanan</a>
-        <a href="#testimonial" class="hover:text-primary transition-colors">Testimonial</a>
         <a href="#portfolio" class="hover:text-primary transition-colors">Portfolio</a>
+        <a href="#testimonial" class="hover:text-primary transition-colors">Testimonial</a>
         <a href="#kontak" class="hover:text-primary transition-colors">Kontak</a>
       </div>
+      <div class="hidden md:flex items-center gap-3">
       <a href="https://wa.me/6285718102378?text=Halo%2C%20saya%20mau%20konsultasi%20gratis" target="_blank"
-        class="bg-primary text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-primary-dark transition-all shadow-sm hover:shadow-md">
+        class="inline-flex bg-primary text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-primary-dark transition-all shadow-sm hover:shadow-md">
         Konsultasi Gratis
       </a>
+      </div>
+      <button type="button" data-mobile-menu-open aria-label="Buka menu" class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-gray-200 text-gray-700 md:hidden">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
     </div>
   </nav>
+  <!-- MOBILE SIDE MENU -->
+  <div data-mobile-menu-overlay class="fixed inset-0 z-[60] hidden bg-gray-900/40 md:hidden"></div>
+  <aside data-mobile-menu class="fixed right-0 top-0 z-[70] h-full w-72 max-w-[82vw] translate-x-full bg-white shadow-2xl transition-transform duration-300 md:hidden">
+    <div class="flex h-16 items-center justify-between border-b border-gray-100 px-4">
+      <div class="flex items-center gap-2">
+        <img src="/favicobagasapco.png" alt="BantuSuksesmu" class="h-9 w-9 rounded-lg object-contain" />
+        <span class="font-bold text-gray-900">Menu</span>
+      </div>
+      <button type="button" data-mobile-menu-close aria-label="Tutup menu" class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="flex flex-col gap-1 p-4">
+        <a href="/" class="rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 hover:bg-blue-50 hover:text-primary" data-mobile-menu-link>Beranda</a>
+        <a href="#tentang" class="rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 hover:bg-blue-50 hover:text-primary" data-mobile-menu-link>Tentang Kami</a>
+        <a href="#layanan" class="rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 hover:bg-blue-50 hover:text-primary" data-mobile-menu-link>Layanan</a>
+        <a href="#portfolio" class="rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 hover:bg-blue-50 hover:text-primary" data-mobile-menu-link>Portfolio</a>
+        <a href="#testimonial" class="rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 hover:bg-blue-50 hover:text-primary" data-mobile-menu-link>Testimonial</a>
+        <a href="#kontak" class="rounded-xl px-4 py-3 text-sm font-semibold text-gray-700 hover:bg-blue-50 hover:text-primary" data-mobile-menu-link>Kontak</a>
+      <a href="https://wa.me/6285718102378?text=Halo%2C%20saya%20mau%20konsultasi%20gratis" target="_blank" class="mt-3 rounded-xl bg-primary px-4 py-3 text-center text-sm font-bold text-white" data-mobile-menu-link>Konsultasi Gratis</a>
+    </div>
+  </aside>
 
   <!-- HERO SECTION -->
-  <section class="pt-20 pb-20 md:pt-20 md:pb-28 relative overflow-hidden bg-cover bg-center" style="background-image: url('sampul.png');">
-    <div class="absolute inset-0 bg-white/20 backdrop-blur-[1px]"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/35"></div>
+  <section class="pt-[76px] pb-10 md:pt-20 md:pb-28 relative overflow-hidden bg-cover bg-center bg-[position:62%_center] md:bg-center" style="background-image: url('/sampul.png');">
+    <div class="absolute inset-0 bg-white/70 backdrop-blur-[1px] md:bg-white/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/80 md:via-white/90 md:to-white/35"></div>
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[520px]">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start md:items-center md:min-h-[520px]">
         <!-- Left: Text -->
         <div class="relative z-10">
-          <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-primary text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
+          <div class="inline-flex items-center gap-2 bg-blue-50/90 border border-blue-100 text-primary text-xs font-semibold px-3 py-1.5 rounded-full mb-5 md:mb-6">
             <span class="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
             Bangkitkan UMKM Indonesia
           </div>
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-5 md:mb-6">
             <span class="text-primary">Sistem Digital yang Tepat</span> untuk setiap bisnis Anda.
           </h1>
-          <p class="text-gray-500 text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
+          <p class="text-gray-900 text-base sm:text-lg leading-relaxed mb-7 md:mb-8 max-w-lg">
             <b>Bangun landing page dan sistem informasi </b>yang membantu bisnis Anda lebih rapi, dipercaya, dan mudah menghasilkan penjualan.
             BantuSuksesmu hadir untuk membantu UMKM berkembang melalui solusi digital yang praktis, efektif, dan sesuai kebutuhan bisnis.
           </p>
           <div class="flex flex-col sm:flex-row gap-3">
             <a href="https://wa.me/6285718102378?text=Halo%2C%20saya%20mau%20konsultasi%20via%20WhatsApp" target="_blank"
-              class="inline-flex items-center justify-center gap-2 border-2 border-primary text-primary font-semibold px-5 py-3 rounded-xl text-sm hover:bg-primary hover:text-white transition-all">
+              class="inline-flex w-full sm:w-auto items-center justify-center gap-2 border-2 border-primary text-primary font-semibold px-5 py-3 rounded-xl text-sm hover:bg-primary hover:text-white transition-all">
               Konsultasi via WhatsApp
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
             </a>
           </div>
-          <p class="text-xs text-gray-400 mt-4">✓ Gratis &nbsp;·&nbsp; ✓ Tanpa komitmen &nbsp;·&nbsp; ✓ Balas cepat</p>
+          <p class="text-xs text-black-400 mt-4">✓ Gratis &nbsp;·&nbsp; ✓ Tanpa komitmen &nbsp;·&nbsp; ✓ Balas cepat</p>
         </div>
       </div>
     </div>
@@ -217,12 +244,12 @@
         </button>
         <div id="portfolioCarousel" class="overflow-hidden">
           <div data-portfolio-track class="flex gap-6 transition-transform duration-500 ease-out">
-        <article class="portfolio-card group relative overflow-hidden rounded-sm min-h-[260px] flex-none w-[82vw] sm:w-[420px] lg:w-[360px] snap-start bg-cover bg-center shadow-2xl" style="background-image: url('sampul.png');">
+        <article class="portfolio-card group relative overflow-hidden rounded-sm min-h-[260px] flex-none w-[82vw] sm:w-[420px] lg:w-[360px] snap-start bg-cover bg-center shadow-2xl" style="background-image: url('/sampul.png');">
           <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
           <div class="absolute inset-x-0 bottom-0 p-6 text-white">
             <div class="text-xs uppercase tracking-widest text-cyan-200 mb-2">Landing Page</div>
             <h3 class="text-xl font-extrabold mb-4">BantuSuksesmu UMKM</h3>
-            <a href="portfolio.html" class="inline-flex items-center justify-center bg-cyan-500 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-cyan-400 transition-colors">Live Demo</a>
+            <a href="/portfolio/" class="inline-flex items-center justify-center bg-cyan-500 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-cyan-400 transition-colors">Live Demo</a>
           </div>
         </article>
         <article class="portfolio-card group relative overflow-hidden rounded-sm min-h-[260px] flex-none w-[82vw] sm:w-[420px] lg:w-[360px] snap-start bg-gradient-to-br from-slate-800 via-slate-700 to-cyan-900 shadow-2xl">
@@ -237,7 +264,7 @@
             <div class="text-sm text-white/80">Admin Dashboard</div>
           </div>
           <div class="absolute inset-x-0 bottom-0 p-6 text-white">
-            <a href="portfolio.html" class="inline-flex items-center justify-center bg-cyan-500 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-cyan-400 transition-colors">Live Demo</a>
+            <a href="/portfolio/" class="inline-flex items-center justify-center bg-cyan-500 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-cyan-400 transition-colors">Live Demo</a>
           </div>
         </article>
         <article class="portfolio-card group relative overflow-hidden rounded-sm min-h-[260px] flex-none w-[82vw] sm:w-[420px] lg:w-[360px] snap-start bg-gradient-to-br from-zinc-900 via-zinc-800 to-slate-700 shadow-2xl">
@@ -247,7 +274,7 @@
           <div class="absolute inset-x-0 bottom-0 p-6 text-white">
             <div class="text-xs uppercase tracking-widest text-cyan-200 mb-2">Company Profile</div>
             <h3 class="text-xl font-extrabold mb-4">Jasa Profesional</h3>
-            <a href="portfolio.html" class="inline-flex items-center justify-center bg-cyan-500 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-cyan-400 transition-colors">Live Demo</a>
+            <a href="/portfolio/" class="inline-flex items-center justify-center bg-cyan-500 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-cyan-400 transition-colors">Live Demo</a>
           </div>
         </article>
         <article class="portfolio-card group relative overflow-hidden rounded-sm min-h-[260px] flex-none w-[82vw] sm:w-[420px] lg:w-[360px] snap-start bg-gradient-to-br from-indigo-500 via-sky-500 to-violet-500 shadow-2xl">
@@ -255,7 +282,7 @@
           <div class="absolute inset-x-0 bottom-0 p-6 text-white">
             <div class="text-xs uppercase tracking-widest text-white/80 mb-2">Website</div>
             <h3 class="text-xl font-extrabold mb-4">Kelas Online</h3>
-            <a href="portfolio.html" class="inline-flex items-center justify-center bg-white text-primary text-sm font-bold px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors">Live Demo</a>
+            <a href="/portfolio/" class="inline-flex items-center justify-center bg-white text-primary text-sm font-bold px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors">Live Demo</a>
           </div>
         </article>
         <article class="portfolio-card group relative overflow-hidden rounded-sm min-h-[260px] flex-none w-[82vw] sm:w-[420px] lg:w-[360px] snap-start bg-gradient-to-br from-orange-300 via-amber-500 to-slate-900 shadow-2xl">
@@ -265,7 +292,7 @@
           <div class="absolute inset-x-0 bottom-0 p-6 text-white">
             <div class="text-xs uppercase tracking-widest text-amber-100 mb-2">Booking System</div>
             <h3 class="text-xl font-extrabold mb-4">Travel & Tour</h3>
-            <a href="portfolio.html" class="inline-flex items-center justify-center bg-cyan-500 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-cyan-400 transition-colors">Live Demo</a>
+            <a href="/portfolio/" class="inline-flex items-center justify-center bg-cyan-500 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-cyan-400 transition-colors">Live Demo</a>
           </div>
         </article>
         <article class="portfolio-card group relative overflow-hidden rounded-sm min-h-[260px] flex-none w-[82vw] sm:w-[420px] lg:w-[360px] snap-start bg-gradient-to-br from-slate-700 via-gray-800 to-black shadow-2xl">
@@ -278,7 +305,7 @@
           <div class="absolute inset-x-0 bottom-0 p-6 text-white">
             <div class="text-xs uppercase tracking-widest text-cyan-200 mb-2">Dashboard</div>
             <h3 class="text-xl font-extrabold mb-4">Manajemen Data</h3>
-            <a href="portfolio.html" class="inline-flex items-center justify-center bg-cyan-500 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-cyan-400 transition-colors">Live Demo</a>
+            <a href="/portfolio/" class="inline-flex items-center justify-center bg-cyan-500 text-white text-sm font-bold px-4 py-2 rounded-lg hover:bg-cyan-400 transition-colors">Live Demo</a>
           </div>
         </article>
           </div>
@@ -293,7 +320,7 @@
         </div>
       </div>
       <div class="text-center mt-6">
-        <a href="portfolio.html" class="inline-flex items-center gap-2 border-2 border-primary text-primary font-semibold px-6 py-3 rounded-xl hover:bg-primary hover:text-white transition-all">
+        <a href="/portfolio/" class="inline-flex items-center gap-2 border-2 border-primary text-primary font-semibold px-6 py-3 rounded-xl hover:bg-primary hover:text-white transition-all">
           Lihat Semua Portfolio
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
         </a>
@@ -405,18 +432,48 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-white-900 text-black-400 py-4">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div class="flex items-center gap-2">
-          <img src="favicobagasapco.png" alt="BantuSuksesmu" class="w-10 h-10 rounded-lg object-contain" />
-          <span class="font-bold text-black-400">BantuSuksesmu</span>
+  <footer class="bg-slate-950 text-slate-400">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid gap-10 lg:grid-cols-[1.35fr_0.8fr_1fr]">
+        <div>
+          <a href="/" class="inline-flex items-center gap-3">
+            <img src="/favicobagasapco-white.png" alt="BantuSuksesmu" class="w-11 h-11 rounded-xl object-contain" />
+            <span class="text-lg font-extrabold text-white">BantuSuksesmu</span>
+          </a>
+          <p class="mt-4 max-w-md text-sm leading-relaxed">
+            Partner digital untuk UMKM yang ingin punya landing page, sistem aplikasi, dan alur bisnis online yang lebih rapi, profesional, dan mudah dikembangkan.
+          </p>
         </div>
-        <p class="text-xs">&copy; 2026 BantuSuksesmu by Bagasapdotco.</p>
+
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">Menu</h3>
+          <nav class="mt-4 grid gap-3 text-sm">
+            <a href="#tentang" class="hover:text-white transition-colors">Tentang Kami</a>
+            <a href="#layanan" class="hover:text-white transition-colors">Layanan</a>
+            <a href="#testimonial" class="hover:text-white transition-colors">Testimonial</a>
+            <a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a>
+            <a href="#kontak" class="hover:text-white transition-colors">Kontak</a>
+          </nav>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">Mulai Diskusi</h3>
+          <p class="mt-4 text-sm leading-relaxed">Ceritakan kebutuhan bisnis Anda, nanti kami bantu arahkan solusi digital yang paling pas.</p>
+          <a href="https://wa.me/6285718102378?text=Halo%2C%20saya%20mau%20konsultasi%20layanan%20BantuSuksesmu" target="_blank"
+            class="mt-5 inline-flex items-center justify-center rounded-xl bg-primary px-5 py-3 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary-dark transition-colors">
+            Konsultasi WhatsApp
+          </a>
+          <p class="mt-4 text-sm text-slate-300">+62 857-1810-2378</p>
+        </div>
+      </div>
+
+      <div class="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; 2026 BantuSuksesmu by Bagasapdotco. Semua hak dilindungi.</p>
+        <p>Landing Page - Sistem Aplikasi - Website UMKM</p>
       </div>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="/main.js"></script>
 </body>
 </html>

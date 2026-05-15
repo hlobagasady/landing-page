@@ -100,6 +100,40 @@
 // ─── WhatsApp number: set once globally ─────────────────────────────────────
 // If you want to quickly update the WA number across the whole site,
 // edit WA_NUMBER below and it will update all WA links automatically.
+// Mobile side menu
+(function initMobileMenu() {
+  const openButton = document.querySelector('[data-mobile-menu-open]');
+  const closeButton = document.querySelector('[data-mobile-menu-close]');
+  const menu = document.querySelector('[data-mobile-menu]');
+  const overlay = document.querySelector('[data-mobile-menu-overlay]');
+  const links = document.querySelectorAll('[data-mobile-menu-link]');
+  if (!openButton || !closeButton || !menu || !overlay) return;
+
+  const openMenu = () => {
+    overlay.classList.remove('hidden');
+    menu.classList.remove('translate-x-full');
+    document.body.classList.add('overflow-hidden');
+    openButton.setAttribute('aria-expanded', 'true');
+  };
+
+  const closeMenu = () => {
+    menu.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+    openButton.setAttribute('aria-expanded', 'false');
+  };
+
+  openButton.setAttribute('aria-expanded', 'false');
+  openButton.addEventListener('click', openMenu);
+  closeButton.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu);
+  links.forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeMenu();
+  });
+})();
+
+
 // Portfolio carousel controls
 (function initPortfolioCarousel() {
   const carousel = document.querySelector('#portfolioCarousel');
